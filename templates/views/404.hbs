@@ -1,0 +1,12 @@
+<div class="main-content">
+    {{header}}
+
+    
+    <p>404 Error,{{message}}</p>
+
+    <p>Don't forget in order to use partials you need to set the correct path with <b>hbs.registerPartials()</b></p>
+    <p>You will insert the partials direct path by using <b>const partialPath = path.join(__dirname,"../templates/partials")</b>;</p>
+    <p><b style="color:red; font-size: 32px">hbs.registerPatrials(partialPath)</b></p>
+</div>
+
+{{>footer}}
