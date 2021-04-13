@@ -21,7 +21,8 @@ const publicDirectorPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialPath = path.join(__dirname,"../templates/partials");
 
-
+// env is an object that has environment variables
+const port = process.env.PORT || 3000;
 // You then need to tell node to look for the path
 // set to view engine allows hbs modules be stored in the view folder
 // -----------------------------------Setup Handlebars Engine and Views Locations--------------------------------------
@@ -146,9 +147,9 @@ app.get("*", (req,res)=>{
 
 
 
-app.listen(3000, (error)=>{
+app.listen(port, (error)=>{
     if(!error){
-        console.log("Server connected");
+        console.log("Server connected " + port);
     }
     else{
         console.log("Connection Error", error);

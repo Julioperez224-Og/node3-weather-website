@@ -2,7 +2,7 @@
 // We will use Fetch for JS requests
 
 
-// fetch data from JSON http 
+// fetch data from JSON http request
 // the response is stored in response
 fetch("http://puzzle.mead.io/puzzle").then((response)=>{
     // response is parsed to json and stored in data
@@ -31,10 +31,9 @@ const pLocation = document.querySelector("#p-location")
 const pForecast = document.querySelector("#p-forecast")
 
 
-
 weatherform.addEventListener("submit", (e)=>{
     e.preventDefault()
-    let address = `http://localhost:3000/weather/?address=${weatherInput.value}`
+    let address = `/weather/?address=${weatherInput.value}`
     pForecast.textContent = "Loading";
     // pForecast.textContent = "Loading";
 
