@@ -2,7 +2,7 @@
 // We will use Fetch for JS requests
 
 
-// fetch data from JSON http request
+// fetch data from JSON http 
 // the response is stored in response
 fetch("http://puzzle.mead.io/puzzle").then((response)=>{
     // response is parsed to json and stored in data
