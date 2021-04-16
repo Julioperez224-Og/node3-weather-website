@@ -13,6 +13,8 @@ const forecast = (lat,long,callback) =>{
     const url = `http://api.weatherstack.com/forecast?access_key=e84129bc20b99e3b1452c36379b4e3ff&query=${lat},${long}&units=f`
     // body is found in the response object response.body
     request({url, json:true}, (err,{body}) => {
+    
+        // console.log(body.forecast)
         if(err){
             callback("Unable to connect to weatherstack", err);
         } 
@@ -23,7 +25,8 @@ const forecast = (lat,long,callback) =>{
             const toDate = body.location.localtime.substr(0,11);
             callback(undefined, {
                 location,
-                current
+                current, 
+                ...body.forecast
             } = body)
         }
     })

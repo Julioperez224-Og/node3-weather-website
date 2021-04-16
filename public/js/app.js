@@ -45,7 +45,8 @@ weatherform.addEventListener("submit", (e)=>{
             }
             else{
                 pLocation.textContent = data.address;
-                pForecast.textContent = data.forecast;
+                pForecast.textContent = data.cast;
+                // console.log(data.maxtemp)
                 // console.log(data.forecast)
                 // console.log(data.address)
                 // console.log(data.temperature)
